@@ -30,7 +30,7 @@ if (logDir) {
       json: true,
       datePattern: 'YYYY-MM-DD',
       dirname: logDir,
-      filename: 'app_%DATE%.log',
+      filename: 'info_%DATE%.log',
       maxFiles: 30, // 30일치 로그 파일 저장
       zippedArchive: true,
     }),
@@ -43,7 +43,7 @@ if (logDir) {
       json: true,
       datePattern: 'YYYY-MM-DD',
       dirname: `${logDir}/error`, // error.log 파일은 /logs/error 하위에 저장
-      filename: 'app_%DATE%.error.log',
+      filename: 'error_%DATE%.error.log',
       maxFiles: 30,
       zippedArchive: true,
     }),

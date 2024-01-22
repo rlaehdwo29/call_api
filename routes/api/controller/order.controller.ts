@@ -16,7 +16,11 @@ const call24ApiPost = async (req: Request, res: Response) => {
         const jsonData = JSON.stringify(requestjson);
         const api24key = body.api_key;
 
-        logger.info(`\n\norder controller call24ApiPost - ${procId} start `);
+        logger.info(``);
+        logger.info(``);
+        logger.info(``);
+        logger.info(`=====================================================================`);
+        logger.info(`order controller call24ApiPost - ${procId} start `);
 
         try{
             const http = require('https');
@@ -50,6 +54,7 @@ const call24ApiPost = async (req: Request, res: Response) => {
                     res.write(resData);
                     res.end();
                     logger.info('order controller call24ApiPost - response end');
+                    logger.info(`=====================================================================`);
                 });
             });
             await mReq.end(jsonData);

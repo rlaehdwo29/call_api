@@ -1,0 +1,17 @@
+2024-01-22 10:27:44 [INFO]:  
+2024-01-22 10:27:44 [INFO]:  
+2024-01-22 10:27:44 [INFO]:  
+2024-01-22 10:27:44 [INFO]: ===================================================================== 
+2024-01-22 10:27:44 [INFO]: order controller call24ApiPost - A2024011961445 start  
+2024-01-22 10:27:44 [INFO]: order controller call24ApiPost - A2024011961445 end 
+2024-01-22 10:27:44 [INFO]: Request Data ->  
+ procId : A2024011961445 
+ url : api/order/addOrder 
+ request_json: {"data":"eeCW3aIHcU5D6+8KD/6xFPXsjlWjCc8D2aFMaPCC8+MAndjDMz63uGv+6RQBRqt+ra6kvpERmztnFBlKyW3caw/3/UY8cJJoZxmvKB41mndd0S1J7jCN8rLe42njp74Pr44kLQJ8ETyOqXpmbE5J+j7c5+m4RZ1Oi6wrOHocwXGlLz+SzRd8jNbhQVg86L581utLLHm4xfOYLg1skkkMqB5SyPUo9lVBfMCC5lFS6FX0KO9HsDoEQ4VbnWoZF/4GeTHkZlkYU6VLUorhTU2vp72tj+dKfZEcTtuhq4tVnRst32l9nJaRZuiO7sC0DMsaw352aIMnxGOeMSt4OVngiOl52hMsRR3n4B3MpVGgOV8wYrd8rQjV2pv9BatLfY3xGKJPnPll758BaNpg50fZbNl7hg8AuYNfPSVkbFm9qqe6VKEBtUX6cXE0QvQse+vwr6TQxzDnWYkx3dbi+CLp6uqbOU81xGv+ct068aR7FEd+j2ILyGESJ5bUbD5BMzAQ6VL3GU2cvTEEeagZ5qwy5OA5iWkEVv09gLU5JXwWAnz/KeXYG8L5CdHECLUVnJR8vPd2ocFdRvqVDOX8ZFao1+eieUuzEdulZx786f0jqLvsUOmvlcl3wWAFJv5oOdCBXnvn4J7sM90gjYuMvEsKoJGkQpLXjWaHoQmltaPqzg1TaBZMacbg4gOsT8MC18kBaCoXz5NnDqWm/tbHnWELfCYT0A7/39NdXWAc6UPe0K6d26yGSpWON1X8HHuE1NrM+qDnnUyPA7wbNdhwp3scSOnY2YMlz+KIWaXhbfBetKE36dNMy99cB/cX12KZYGp27tPYtgtD6RdyeXATsFDCKOslDtODS4KOOKo3EQa8OnQO21OulWgHtweoUGkQ649a","userVal":""} 
+ api24key: 64874938c0a8633403efb86fd02f4ea7 
+2024-01-22 10:27:44 [INFO]: Respose Data : 
+ procId: A2024011961445 
+ orderId:  
+ ResponseData: {"code":1,"message":"","data":"re+z8P6ytP3vc4o8I+65PzaAs6i4bagtlY2EqU6UlEo=","userVal":""} 
+2024-01-22 10:27:44 [INFO]: order controller call24ApiPost - response end 
+2024-01-22 10:27:44 [INFO]: ===================================================================== 

@@ -1,5 +1,0 @@
-2024-01-22 09:42:39 [ERROR]: 
-
-order controller call24ApiPost URL_Error : 
- procId: A2024011961445 
- Exception : TypeError [ERR_INVALID_ARG_TYPE]: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Object 
