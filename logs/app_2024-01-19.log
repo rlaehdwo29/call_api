@@ -1,0 +1,149 @@
+2024-01-19 15:44:57 [INFO]: 하아앙 =>/api/v1 
+2024-01-19 15:45:18 [INFO]: order controller call24ApiPost - start  
+2024-01-19 15:45:18 [ERROR]: order controller call24ApiPost URL_Error :  The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Object {"code":"ERR_INVALID_ARG_TYPE","stack":"TypeError [ERR_INVALID_ARG_TYPE]: The \"chunk\" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Object\n    at new NodeError (node:internal/errors:405:5)\n    at write_ (node:_http_outgoing:879:11)\n    at ClientRequest.end (node:_http_outgoing:1030:5)\n    at C:\\nodejs\\call-api\\routes\\api\\controller\\order.controller.ts:49:24\n    at Generator.next (<anonymous>)\n    at fulfilled (C:\\nodejs\\call-api\\routes\\api\\controller\\order.controller.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+2024-01-19 15:45:32 [INFO]: 하아앙 =>/api/v1 
+2024-01-19 15:45:38 [INFO]: order controller call24ApiPost - start  
+2024-01-19 15:53:14 [INFO]: 하아앙 =>/api/v1 
+2024-01-19 15:53:27 [INFO]: 하아앙 =>/api/v1 
+2024-01-19 15:56:06 [INFO]: 하아앙 =>/api/v1 
+2024-01-19 15:56:27 [INFO]: 하아앙 =>/api/v1 
+2024-01-19 15:58:08 [INFO]: 하아앙 =>/api/v1 
+2024-01-19 15:58:27 [INFO]: 하아앙 =>/api/v1 
+2024-01-19 16:01:14 [INFO]: order controller call24ApiPost - start  
+2024-01-19 16:01:14 [ERROR]: order controller call24ApiPost URL_Error :  The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Object {"code":"ERR_INVALID_ARG_TYPE","stack":"TypeError [ERR_INVALID_ARG_TYPE]: The \"chunk\" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Object\n    at new NodeError (node:internal/errors:405:5)\n    at write_ (node:_http_outgoing:879:11)\n    at ClientRequest.end (node:_http_outgoing:1030:5)\n    at C:\\nodejs\\call-api\\routes\\api\\controller\\order.controller.ts:52:24\n    at Generator.next (<anonymous>)\n    at fulfilled (C:\\nodejs\\call-api\\routes\\api\\controller\\order.controller.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+2024-01-19 16:01:45 [INFO]: 뭐가 문젠데 =>/api/call24/////api/call24 
+2024-01-19 16:02:15 [ERROR]: uncaughtException: socket hang up
+Error: socket hang up
+    at connResetException (node:internal/errors:720:14)
+    at TLSSocket.socketOnEnd (node:_http_client:519:23)
+    at TLSSocket.emit (node:events:526:35)
+    at TLSSocket.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1376:12)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21) {"error":{"code":"ECONNRESET"},"stack":"Error: socket hang up\n    at connResetException (node:internal/errors:720:14)\n    at TLSSocket.socketOnEnd (node:_http_client:519:23)\n    at TLSSocket.emit (node:events:526:35)\n    at TLSSocket.emit (node:domain:489:12)\n    at endReadableNT (node:internal/streams/readable:1376:12)\n    at processTicksAndRejections (node:internal/process/task_queues:82:21)","exception":true,"date":"Fri Jan 19 2024 16:02:15 GMT+0900 (대한민국 표준시)","process":{"pid":21108,"uid":null,"gid":null,"cwd":"C:\\nodejs\\call-api","execPath":"C:\\Program Files\\nodejs\\node.exe","version":"v20.5.0","argv":["C:\\nodejs\\call-api\\node_modules\\ts-node\\dist\\bin.js","C:\\nodejs\\call-api\\bin\\www.ts"],"memoryUsage":{"rss":199700480,"heapTotal":159510528,"heapUsed":155123624,"external":5329244,"arrayBuffers":2351237}},"os":{"loadavg":[0,0,0],"uptime":25870.359},"trace":[{"column":14,"file":"node:internal/errors","function":"connResetException","line":720,"method":null,"native":false},{"column":23,"file":"node:_http_client","function":"TLSSocket.socketOnEnd","line":519,"method":"socketOnEnd","native":false},{"column":35,"file":"node:events","function":"TLSSocket.emit","line":526,"method":"emit","native":false},{"column":12,"file":"node:domain","function":"TLSSocket.emit","line":489,"method":"emit","native":false},{"column":12,"file":"node:internal/streams/readable","function":"endReadableNT","line":1376,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":82,"method":null,"native":false}]}
+2024-01-19 16:02:28 [INFO]: 하아앙 =>/api/v1 
+2024-01-19 16:03:22 [INFO]: 하아앙 =>/api/v1 
+2024-01-19 16:03:59 [INFO]: 하아앙 =>/api/v1 
+2024-01-19 16:05:37 [INFO]: order controller call24ApiPost - start  
+2024-01-19 16:05:38 [INFO]: Request Data ->  A2024011961443 : api/order/addOrder 
+2024-01-19 16:05:38 [INFO]: A2024011961443 : Respose Data -> procId: A2024011961443 ->  {"code":1,"message":"","data":"re+z8P6ytP3vc4o8I+65P0mtoW4rmShcqTsUlsVE+9E=","userVal":""} 
+2024-01-19 16:07:47 [INFO]: order controller call24ApiPost - start  
+2024-01-19 16:07:47 [INFO]: Request Data ->  A2024011961444 : api/order/modOrder 
+2024-01-19 16:07:47 [INFO]: A2024011961444 : Respose Data -> procId: A2024011961444 ->  {"code":1,"message":"","data":"re+z8P6ytP3vc4o8I+65P0mtoW4rmShcqTsUlsVE+9E=","userVal":""} 
+2024-01-19 16:08:49 [INFO]: order controller call24ApiPost - start  
+2024-01-19 16:08:49 [ERROR]: order controller call24ApiPost URL_Error -> procId: undefined -> pro : TypeError [ERR_INVALID_ARG_TYPE]: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Object 
+2024-01-19 16:09:50 [ERROR]: uncaughtException: socket hang up
+Error: socket hang up
+    at connResetException (node:internal/errors:720:14)
+    at TLSSocket.socketOnEnd (node:_http_client:519:23)
+    at TLSSocket.emit (node:events:526:35)
+    at TLSSocket.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1376:12)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21) {"error":{"code":"ECONNRESET"},"stack":"Error: socket hang up\n    at connResetException (node:internal/errors:720:14)\n    at TLSSocket.socketOnEnd (node:_http_client:519:23)\n    at TLSSocket.emit (node:events:526:35)\n    at TLSSocket.emit (node:domain:489:12)\n    at endReadableNT (node:internal/streams/readable:1376:12)\n    at processTicksAndRejections (node:internal/process/task_queues:82:21)","exception":true,"date":"Fri Jan 19 2024 16:09:50 GMT+0900 (대한민국 표준시)","process":{"pid":21372,"uid":null,"gid":null,"cwd":"C:\\nodejs\\call-api","execPath":"C:\\Program Files\\nodejs\\node.exe","version":"v20.5.0","argv":["C:\\nodejs\\call-api\\node_modules\\ts-node\\dist\\bin.js","C:\\nodejs\\call-api\\bin\\www.ts"],"memoryUsage":{"rss":197550080,"heapTotal":158199808,"heapUsed":154987600,"external":5322058,"arrayBuffers":2344051}},"os":{"loadavg":[0,0,0],"uptime":26325.468},"trace":[{"column":14,"file":"node:internal/errors","function":"connResetException","line":720,"method":null,"native":false},{"column":23,"file":"node:_http_client","function":"TLSSocket.socketOnEnd","line":519,"method":"socketOnEnd","native":false},{"column":35,"file":"node:events","function":"TLSSocket.emit","line":526,"method":"emit","native":false},{"column":12,"file":"node:domain","function":"TLSSocket.emit","line":489,"method":"emit","native":false},{"column":12,"file":"node:internal/streams/readable","function":"endReadableNT","line":1376,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":82,"method":null,"native":false}]}
+2024-01-19 16:13:57 [INFO]: order controller call24ApiPost - start  
+2024-01-19 16:13:57 [INFO]: order controller call24ApiPost - end  
+2024-01-19 16:13:57 [INFO]: Request Data ->  procId :  
+ url : api/order/addOrder 
+ request_json: [object Object] 
+ api24key: 64874938c0a8633403efb86fd02f4ea7 
+2024-01-19 16:13:57 [INFO]:  : Respose Data -> procId:  ->  {"code":-99,"message":"올바른 상차일이 아닙니다.","data":"","userVal":""} 
+2024-01-19 16:14:21 [INFO]: order controller call24ApiPost - start  
+2024-01-19 16:14:22 [INFO]: order controller call24ApiPost - end  
+2024-01-19 16:14:22 [INFO]: Request Data ->  procId :  
+ url : api/order/addOrder 
+ request_json: {"data":"Zw9iOX1paiSONaQHROc/DgHACxxppfxtIFIjZj8x6IjsEbXW9z59BmXSupzQivt1HlvxucxPptJVNcQSAT+v9+lxTtFLMteZ3NWGhwEtx/YF1vYhI3d4MdR2gBpvZbci4UDgQ9PXHOWe/DOcUFVMCOjFQgKqRm/Dtykn7XP10ufFCE+R6aGLOVWSigc0dBFMtIVbm6iekhrcaVrFl9LGsPtBxhn2+wbCAv/0P4LKIzk4eeTgkexI3fFRUHgxKht3a1aPa090ScZso8pQuYUnByCR9kSQ8kaMLJ3ULG9txodktJGTatkyKSn5qZmuk9KcI4iZVhbepOMCpKvPMpND3GRLtSt96kBiNlNxC7ai+MOzx49zZlciNiuDVnwFqFmebM5DQIddmjuM4bQOHkrrBeXjQ///KgvnWfJn2jhhkgah1e2jDaoVvoyLHJVnn2h1KaaK9FbQ2/Msu8sT1Jt8y2KO8niSgs+KnHQKyBEUexFWgJF8TDhZZdXB6HssLoHH9SYHZBQR0iuoJe2lvrjFkbF23Adrj5BJ8xh0fzLRAgXSu1X8yn266r8lkpIZ4yNruvxwgQaivF8bRO7hjLfe92uulak+tYv6XaWXc3Y5FnY+7bEycmjqxINoFWWS8ef5suV1/+SXh7sweJo+1EWhVkwLBOCWTKhhK5ETqjWkM+Quxx2mQ9GQ8G/TVF/4PkilNkbQCztlyqlwnzLfcRh59Wb2HYW5y03usvVUYJIUlkoYfIrilbERS2z3HXvvcJvmpM0LDqQ51VjFWYABZ1qb/jUeyhMvGqJSNH1t0qvevtOvdrTF+JfXFpPBJUOMDsZQk7oxrqzLP0DjvzRywCpPem5dYyf3dBlnElVlB6/VCGa2bJ3SKlnDeIEIkw+0aMyE","userVal":""} 
+ api24key: 64874938c0a8633403efb86fd02f4ea7 
+2024-01-19 16:14:22 [INFO]:  : Respose Data -> procId:  ->  {"code":-99,"message":"올바른 상차일이 아닙니다.","data":"","userVal":""} 
+2024-01-19 16:16:03 [INFO]: order controller call24ApiPost - start  
+2024-01-19 16:16:03 [INFO]: order controller call24ApiPost - end  
+2024-01-19 16:16:03 [INFO]: Request Data ->  
+ procId :  
+ url : api/order/addOrder 
+ request_json: {"data":"Zw9iOX1paiSONaQHROc/DgHACxxppfxtIFIjZj8x6IjsEbXW9z59BmXSupzQivt1HlvxucxPptJVNcQSAT+v9+lxTtFLMteZ3NWGhwEtx/YF1vYhI3d4MdR2gBpvZbci4UDgQ9PXHOWe/DOcUFVMCOjFQgKqRm/Dtykn7XP10ufFCE+R6aGLOVWSigc0dBFMtIVbm6iekhrcaVrFl9LGsPtBxhn2+wbCAv/0P4LKIzk4eeTgkexI3fFRUHgxKht3a1aPa090ScZso8pQuYUnByCR9kSQ8kaMLJ3ULG9txodktJGTatkyKSn5qZmuk9KcI4iZVhbepOMCpKvPMpND3GRLtSt96kBiNlNxC7ai+MOzx49zZlciNiuDVnwFqFmebM5DQIddmjuM4bQOHkrrBeXjQ///KgvnWfJn2jhhkgah1e2jDaoVvoyLHJVnn2h1KaaK9FbQ2/Msu8sT1Jt8y2KO8niSgs+KnHQKyBEUexFWgJF8TDhZZdXB6HssLoHH9SYHZBQR0iuoJe2lvrjFkbF23Adrj5BJ8xh0fzLRAgXSu1X8yn266r8lkpIZ4yNruvxwgQaivF8bRO7hjLfe92uulak+tYv6XaWXc3Y5FnY+7bEycmjqxINoFWWS8ef5suV1/+SXh7sweJo+1EWhVkwLBOCWTKhhK5ETqjWkM+Quxx2mQ9GQ8G/TVF/4PkilNkbQCztlyqlwnzLfcRh59Wb2HYW5y03usvVUYJIUlkoYfIrilbERS2z3HXvvcJvmpM0LDqQ51VjFWYABZ1qb/jUeyhMvGqJSNH1t0qvevtOvdrTF+JfXFpPBJUOMDsZQk7oxrqzLP0DjvzRywCpPem5dYyf3dBlnElVlB6/VCGa2bJ3SKlnDeIEIkw+0aMyE","userVal":""} 
+ api24key: 64874938c0a8633403efb86fd02f4ea7 
+2024-01-19 16:16:03 [INFO]: Respose Data : 
+ procId:  
+ ResponseData: {"code":-99,"message":"올바른 상차일이 아닙니다.","data":"","userVal":""} 
+2024-01-19 16:18:41 [INFO]: order controller call24ApiPost - start  
+2024-01-19 16:18:41 [INFO]: order controller call24ApiPost - end  
+2024-01-19 16:18:41 [INFO]: Request Data ->  
+ procId : A2024011961445 
+ url : api/order/addOrder 
+ request_json: "{\"data\":\"eeCW3aIHcU5D6+8KD/6xFPXsjlWjCc8D2aFMaPCC8+MAndjDMz63uGv+6RQBRqt+ra6kvpERmztnFBlKyW3caxRDOEGDaqhC6RttEiZV70KBRra7EvCOcXnniGH2XwKKizTyeuaKcjjUMyTbQXknlYLYURilrVM2f/EtAPVrGrMzXswVkBJrNyzWpoDcrzRi4n21fnKpWed2CrDRCeyaBPNySzozn08zNXPNN0oYc6Ud0xNA6Go1sDsAjztSyy92qT+9TliuKj9HeTZXOyfyHliz9MaQtdhrf/xrhPt31HzakwFRpcr/3Kbt2Vw5xFCViVw+UU61WNgvNMb8veEYAXhjLp0dEOEDpuFL4hmC0eU7bs9UUNqmy8xXAK5gWsWevww9dWv1eWsWtJIRLuoGDy3AeD7UFEMGIZBmFJboFB8UYSjWIV7NjtrXryYhpePP7Uw7Tl9iPHYtb0H/qwl8tKXefi/mU5gJnm2Y12zIGbQX+4MYTMuZfTUSYT6iSVHThaDnOzhU7TrjF3xtwN+dEqT2vzNxYk1hsuNzxruTBEuIaqV2SCC5pi+I4UvCD5vaJaI1AKFEC20uCMDyaHCJ1hOde9dqXzr2vbuNQxtRreQpikj5UvHl9/Z/Yccjv5KCOlJXi3DvW3BDqoi0j5jZENMMhx4AjrL4pVSd/dbJ81L/z1Y9MRCXh1bKFArdscLXa+4WntYG1c5tqiuGL24llOAIhVReVyf9DOxlssEzmxmREk4Ha5Kw4lsUSDJNERB6ySduqAmeMl50mm4t/m4DrleuEU9hgcCN1ABfrNMyDWZnkpmd/ak09AhcYoe3mca5P7k/Y1eav9H01PE+YPWtByTIbhyCVlbzf3GUJGdyMM8=\",\"userVal\":\"\"}" 
+ api24key: 64874938c0a8633403efb86fd02f4ea7 
+2024-01-19 16:18:41 [INFO]: Respose Data : 
+ procId: A2024011961445 
+ ResponseData: error-400 
+2024-01-19 16:19:40 [INFO]: order controller call24ApiPost - start  
+2024-01-19 16:19:40 [INFO]: order controller call24ApiPost - end  
+2024-01-19 16:19:40 [INFO]: Request Data ->  
+ procId :  
+ url : api/order/addOrder 
+ request_json: {"data":"eeCW3aIHcU5D6+8KD/6xFPXsjlWjCc8D2aFMaPCC8+MAndjDMz63uGv+6RQBRqt+ra6kvpERmztnFBlKyW3caxRDOEGDaqhC6RttEiZV70KBRra7EvCOcXnniGH2XwKKizTyeuaKcjjUMyTbQXknlYLYURilrVM2f/EtAPVrGrMzXswVkBJrNyzWpoDcrzRi4n21fnKpWed2CrDRCeyaBPNySzozn08zNXPNN0oYc6Ud0xNA6Go1sDsAjztSyy92qT+9TliuKj9HeTZXOyfyHliz9MaQtdhrf/xrhPt31HzakwFRpcr/3Kbt2Vw5xFCViVw+UU61WNgvNMb8veEYAXhjLp0dEOEDpuFL4hmC0eU7bs9UUNqmy8xXAK5gWsWevww9dWv1eWsWtJIRLuoGDy3AeD7UFEMGIZBmFJboFB8UYSjWIV7NjtrXryYhpePP7Uw7Tl9iPHYtb0H/qwl8tKXefi/mU5gJnm2Y12zIGbQX+4MYTMuZfTUSYT6iSVHThaDnOzhU7TrjF3xtwN+dEqT2vzNxYk1hsuNzxruTBEuIaqV2SCC5pi+I4UvCD5vaJaI1AKFEC20uCMDyaHCJ1hOde9dqXzr2vbuNQxtRreQpikj5UvHl9/Z/Yccjv5KCOlJXi3DvW3BDqoi0j5jZENMMhx4AjrL4pVSd/dbJ81L/z1Y9MRCXh1bKFArdscLXa+4WntYG1c5tqiuGL24llOAIhVReVyf9DOxlssEzmxmREk4Ha5Kw4lsUSDJNERB6ySduqAmeMl50mm4t/m4DrleuEU9hgcCN1ABfrNMyDWZnkpmd/ak09AhcYoe3mca5P7k/Y1eav9H01PE+YPWtByTIbhyCVlbzf3GUJGdyMM8=","userVal":""} 
+ api24key: 64874938c0a8633403efb86fd02f4ea7 
+2024-01-19 16:19:40 [INFO]: Respose Data : 
+ procId:  
+ ResponseData: {"code":1,"message":"","data":"re+z8P6ytP3vc4o8I+65P7GMBsEeRcSl+oo6LuCuVg0=","userVal":""} 
+2024-01-19 16:20:09 [INFO]: order controller call24ApiPost - start  
+2024-01-19 16:20:09 [INFO]: order controller call24ApiPost - end  
+2024-01-19 16:20:09 [INFO]: Request Data ->  
+ procId : A2024011961445 
+ url : api/order/addOrder 
+ request_json: {"data":"eeCW3aIHcU5D6+8KD/6xFPXsjlWjCc8D2aFMaPCC8+MAndjDMz63uGv+6RQBRqt+ra6kvpERmztnFBlKyW3caxRDOEGDaqhC6RttEiZV70KBRra7EvCOcXnniGH2XwKKizTyeuaKcjjUMyTbQXknlYLYURilrVM2f/EtAPVrGrMzXswVkBJrNyzWpoDcrzRi4n21fnKpWed2CrDRCeyaBPNySzozn08zNXPNN0oYc6Ud0xNA6Go1sDsAjztSyy92qT+9TliuKj9HeTZXOyfyHliz9MaQtdhrf/xrhPt31HzakwFRpcr/3Kbt2Vw5xFCViVw+UU61WNgvNMb8veEYAXhjLp0dEOEDpuFL4hmC0eU7bs9UUNqmy8xXAK5gWsWevww9dWv1eWsWtJIRLuoGDy3AeD7UFEMGIZBmFJboFB8UYSjWIV7NjtrXryYhpePP7Uw7Tl9iPHYtb0H/qwl8tKXefi/mU5gJnm2Y12zIGbQX+4MYTMuZfTUSYT6iSVHThaDnOzhU7TrjF3xtwN+dEqT2vzNxYk1hsuNzxruTBEuIaqV2SCC5pi+I4UvCD5vaJaI1AKFEC20uCMDyaHCJ1hOde9dqXzr2vbuNQxtRreQpikj5UvHl9/Z/Yccjv5KCOlJXi3DvW3BDqoi0j5jZENMMhx4AjrL4pVSd/dbJ81L/z1Y9MRCXh1bKFArdscLXa+4WntYG1c5tqiuGL24llOAIhVReVyf9DOxlssEzmxmREk4Ha5Kw4lsUSDJNERB6ySduqAmeMl50mm4t/m4DrleuEU9hgcCN1ABfrNMyDWZnkpmd/ak09AhcYoe3mca5P7k/Y1eav9H01PE+YPWtByTIbhyCVlbzf3GUJGdyMM8=","userVal":""} 
+ api24key: 64874938c0a8633403efb86fd02f4ea7 
+2024-01-19 16:20:09 [INFO]: Respose Data : 
+ procId: A2024011961445 
+ ResponseData: {"code":1,"message":"","data":"re+z8P6ytP3vc4o8I+65P61sfVV1C87FQvPH4Mgrs5k=","userVal":""} 
+2024-01-19 16:21:27 [INFO]: 
+
+order controller call24ApiPost - start  
+2024-01-19 16:21:27 [INFO]: order controller call24ApiPost - end 
+2024-01-19 16:21:27 [INFO]: Request Data ->  
+ procId : A2024011961445 
+ url : api/order/addOrder 
+ request_json: {"data":"eeCW3aIHcU5D6+8KD/6xFPXsjlWjCc8D2aFMaPCC8+MAndjDMz63uGv+6RQBRqt+ra6kvpERmztnFBlKyW3caxRDOEGDaqhC6RttEiZV70KBRra7EvCOcXnniGH2XwKKizTyeuaKcjjUMyTbQXknlYLYURilrVM2f/EtAPVrGrMzXswVkBJrNyzWpoDcrzRi4n21fnKpWed2CrDRCeyaBPNySzozn08zNXPNN0oYc6Ud0xNA6Go1sDsAjztSyy92qT+9TliuKj9HeTZXOyfyHliz9MaQtdhrf/xrhPt31HzakwFRpcr/3Kbt2Vw5xFCViVw+UU61WNgvNMb8veEYAXhjLp0dEOEDpuFL4hmC0eU7bs9UUNqmy8xXAK5gWsWevww9dWv1eWsWtJIRLuoGDy3AeD7UFEMGIZBmFJboFB8UYSjWIV7NjtrXryYhpePP7Uw7Tl9iPHYtb0H/qwl8tKXefi/mU5gJnm2Y12zIGbQX+4MYTMuZfTUSYT6iSVHThaDnOzhU7TrjF3xtwN+dEqT2vzNxYk1hsuNzxruTBEuIaqV2SCC5pi+I4UvCD5vaJaI1AKFEC20uCMDyaHCJ1hOde9dqXzr2vbuNQxtRreQpikj5UvHl9/Z/Yccjv5KCOlJXi3DvW3BDqoi0j5jZENMMhx4AjrL4pVSd/dbJ81L/z1Y9MRCXh1bKFArdscLXa+4WntYG1c5tqiuGL24llOAIhVReVyf9DOxlssEzmxmREk4Ha5Kw4lsUSDJNERB6ySduqAmeMl50mm4t/m4DrleuEU9hgcCN1ABfrNMyDWZnkpmd/ak09AhcYoe3mca5P7k/Y1eav9H01PE+YPWtByTIbhyCVlbzf3GUJGdyMM8=","userVal":""} 
+ api24key: 64874938c0a8633403efb86fd02f4ea7 
+2024-01-19 16:21:27 [INFO]: Respose Data : 
+ procId: A2024011961445 
+ ResponseData: {"code":1,"message":"","data":"re+z8P6ytP3vc4o8I+65P0xm+6w70H9s+FSnSvdGPfo=","userVal":""} 
+2024-01-19 16:22:53 [INFO]: 
+
+order controller call24ApiPost - start  
+2024-01-19 16:22:53 [INFO]: order controller call24ApiPost - end 
+2024-01-19 16:22:54 [INFO]: Request Data ->  
+ procId : A2024011961445 
+ url : api/order/addOrder 
+ request_json: {"data":"eeCW3aIHcU5D6+8KD/6xFPXsjlWjCc8D2aFMaPCC8+MAndjDMz63uGv+6RQBRqt+ra6kvpERmztnFBlKyW3caxRDOEGDaqhC6RttEiZV70KBRra7EvCOcXnniGH2XwKKizTyeuaKcjjUMyTbQXknlYLYURilrVM2f/EtAPVrGrMzXswVkBJrNyzWpoDcrzRi4n21fnKpWed2CrDRCeyaBPNySzozn08zNXPNN0oYc6Ud0xNA6Go1sDsAjztSyy92qT+9TliuKj9HeTZXOyfyHliz9MaQtdhrf/xrhPt31HzakwFRpcr/3Kbt2Vw5xFCViVw+UU61WNgvNMb8veEYAXhjLp0dEOEDpuFL4hmC0eU7bs9UUNqmy8xXAK5gWsWevww9dWv1eWsWtJIRLuoGDy3AeD7UFEMGIZBmFJboFB8UYSjWIV7NjtrXryYhpePP7Uw7Tl9iPHYtb0H/qwl8tKXefi/mU5gJnm2Y12zIGbQX+4MYTMuZfTUSYT6iSVHThaDnOzhU7TrjF3xtwN+dEqT2vzNxYk1hsuNzxruTBEuIaqV2SCC5pi+I4UvCD5vaJaI1AKFEC20uCMDyaHCJ1hOde9dqXzr2vbuNQxtRreQpikj5UvHl9/Z/Yccjv5KCOlJXi3DvW3BDqoi0j5jZENMMhx4AjrL4pVSd/dbJ81L/z1Y9MRCXh1bKFArdscLXa+4WntYG1c5tqiuGL24llOAIhVReVyf9DOxlssEzmxmREk4Ha5Kw4lsUSDJNERB6ySduqAmeMl50mm4t/m4DrleuEU9hgcCN1ABfrNMyDWZnkpmd/ak09AhcYoe3mca5P7k/Y1eav9H01PE+YPWtByTIbhyCVlbzf3GUJGdyMM8=","userVal":""} 
+ api24key: 64874938c0a8633403efb86fd02f4ea7 
+2024-01-19 16:22:54 [INFO]: Respose Data : 
+ procId: A2024011961445 
+ ResponseData: {"code":1,"message":"","data":"re+z8P6ytP3vc4o8I+65Pwx6LKyRlCgtp7oa3M8W2tE=","userVal":""} 
+2024-01-19 16:22:54 [INFO]: order controller call24ApiPost - response end 
+2024-01-19 16:23:24 [INFO]: 
+
+order controller call24ApiPost - start  
+2024-01-19 16:23:24 [ERROR]: 
+
+order controller call24ApiPost URL_Error : 
+ procId: A2024011961445 
+ Exception : TypeError [ERR_INVALID_ARG_TYPE]: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Object 
+2024-01-19 16:24:25 [ERROR]: uncaughtException: socket hang up
+Error: socket hang up
+    at connResetException (node:internal/errors:720:14)
+    at TLSSocket.socketOnEnd (node:_http_client:519:23)
+    at TLSSocket.emit (node:events:526:35)
+    at TLSSocket.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1376:12)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21) {"error":{"code":"ECONNRESET"},"stack":"Error: socket hang up\n    at connResetException (node:internal/errors:720:14)\n    at TLSSocket.socketOnEnd (node:_http_client:519:23)\n    at TLSSocket.emit (node:events:526:35)\n    at TLSSocket.emit (node:domain:489:12)\n    at endReadableNT (node:internal/streams/readable:1376:12)\n    at processTicksAndRejections (node:internal/process/task_queues:82:21)","exception":true,"date":"Fri Jan 19 2024 16:24:25 GMT+0900 (대한민국 표준시)","process":{"pid":16392,"uid":null,"gid":null,"cwd":"C:\\nodejs\\call-api","execPath":"C:\\Program Files\\nodejs\\node.exe","version":"v20.5.0","argv":["C:\\nodejs\\call-api\\node_modules\\ts-node\\dist\\bin.js","C:\\nodejs\\call-api\\bin\\www.ts"],"memoryUsage":{"rss":197750784,"heapTotal":158461952,"heapUsed":154341296,"external":5316610,"arrayBuffers":2338603}},"os":{"loadavg":[0,0,0],"uptime":27200.343},"trace":[{"column":14,"file":"node:internal/errors","function":"connResetException","line":720,"method":null,"native":false},{"column":23,"file":"node:_http_client","function":"TLSSocket.socketOnEnd","line":519,"method":"socketOnEnd","native":false},{"column":35,"file":"node:events","function":"TLSSocket.emit","line":526,"method":"emit","native":false},{"column":12,"file":"node:domain","function":"TLSSocket.emit","line":489,"method":"emit","native":false},{"column":12,"file":"node:internal/streams/readable","function":"endReadableNT","line":1376,"method":null,"native":false},{"column":21,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":82,"method":null,"native":false}]}
+2024-01-19 16:36:15 [INFO]: 
+
+order controller call24ApiPost - A2024011961445 start  
+2024-01-19 16:36:15 [INFO]: order controller call24ApiPost - A2024011961445 end 
+2024-01-19 16:36:16 [INFO]: Request Data ->  
+ procId : A2024011961445 
+ url : api/order/addOrder 
+ request_json: {"data":"eeCW3aIHcU5D6+8KD/6xFPXsjlWjCc8D2aFMaPCC8+MAndjDMz63uGv+6RQBRqt+ra6kvpERmztnFBlKyW3caxRDOEGDaqhC6RttEiZV70KBRra7EvCOcXnniGH2XwKKizTyeuaKcjjUMyTbQXknlYLYURilrVM2f/EtAPVrGrMzXswVkBJrNyzWpoDcrzRi4n21fnKpWed2CrDRCeyaBPNySzozn08zNXPNN0oYc6Ud0xNA6Go1sDsAjztSyy92qT+9TliuKj9HeTZXOyfyHliz9MaQtdhrf/xrhPt31HzakwFRpcr/3Kbt2Vw5xFCViVw+UU61WNgvNMb8veEYAXhjLp0dEOEDpuFL4hmC0eU7bs9UUNqmy8xXAK5gWsWevww9dWv1eWsWtJIRLuoGDy3AeD7UFEMGIZBmFJboFB8UYSjWIV7NjtrXryYhpePP7Uw7Tl9iPHYtb0H/qwl8tKXefi/mU5gJnm2Y12zIGbQX+4MYTMuZfTUSYT6iSVHThaDnOzhU7TrjF3xtwN+dEqT2vzNxYk1hsuNzxruTBEuIaqV2SCC5pi+I4UvCD5vaJaI1AKFEC20uCMDyaHCJ1hOde9dqXzr2vbuNQxtRreQpikj5UvHl9/Z/Yccjv5KCOlJXi3DvW3BDqoi0j5jZENMMhx4AjrL4pVSd/dbJ81L/z1Y9MRCXh1bKFArdscLXa+4WntYG1c5tqiuGL24llOAIhVReVyf9DOxlssEzmxmREk4Ha5Kw4lsUSDJNERB6ySduqAmeMl50mm4t/m4DrleuEU9hgcCN1ABfrNMyDWZnkpmd/ak09AhcYoe3mca5P7k/Y1eav9H01PE+YPWtByTIbhyCVlbzf3GUJGdyMM8=","userVal":""} 
+ api24key: 64874938c0a8633403efb86fd02f4ea7 
+2024-01-19 16:36:16 [INFO]: Respose Data : 
+ procId: A2024011961445 
+ ResponseData: {"code":1,"message":"","data":"re+z8P6ytP3vc4o8I+65P7F3AQ2rrfJD6o1J0oDbv7U=","userVal":""} 
+2024-01-19 16:36:16 [INFO]: order controller call24ApiPost - response end 

@@ -5,7 +5,7 @@ import dotEnvConfig from '../../config/dot-env-config';
 import utils from './utils';
 dotEnvConfig();
 
-const logDir = process.env.LOG_DIR; // logs 디렉토리 하위에 로그 파일 저장
+const logDir = 'logs'; // logs 디렉토리 하위에 로그 파일 저장
 const { combine, timestamp, printf } = winston.format;
 
 // Define log format
@@ -72,48 +72,5 @@ if (process.env.NODE_ENV !== 'production') {
     }),
   );
 }
-const httpLoggerTransport: WinstonDaily[] = [];
-if (logDir) {
-  // info 레벨 로그를 저장할 파일 설정
-  httpLoggerTransport.push(
-    new WinstonDaily({
-      level: 'info',
-      json: true,
-      datePattern: 'YYYY-MM-DD',
-      dirname: logDir,
-      filename: 'http_%DATE%.log',
-      maxFiles: 30, // 30일치 로그 파일 저장
-      zippedArchive: true,
-    }),
-  );
-}
-const httpLogger = winston.createLogger({
-  format: combine(
-    timestamp({
-      format: 'YYYY-MM-DD HH:mm:ss',
-    }),
-    logFormat,
-  ),
-  transports: httpLoggerTransport,
-});
 
-// Production 환경이 아닌 경우(dev 등)
-if (process.env.NODE_ENV !== 'production') {
-  httpLogger.add(
-    new winston.transports.Console({
-      level: 'debug',
-      format: winston.format.combine(
-        winston.format.colorize(), // 색깔 넣어서 출력
-        winston.format.simple(), // `${info.level}: ${info.message} JSON.stringify({ ...rest })` 포맷으로 출력
-      ),
-    }),
-  );
-}
-
-const stream = {
-  write: (message: string) => {
-    httpLogger.info(message);
-  },
-};
-
-export { logger, stream };
+export { logger };

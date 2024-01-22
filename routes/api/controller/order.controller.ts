@@ -1,24 +1,22 @@
 import { logger } from '../../modules/logger';
-import utils from '../../modules/utils';
-
 import { Request, Response } from 'express';
 import { Router } from 'express';
-import momentTimezone from 'moment-timezone';
-import DB from '../../../db/models';
-import { Json } from 'sequelize/types/utils';
 
 const router = Router();
 
 const call24ApiPost = async (req: Request, res: Response) => {
-    logger.info('order controller call24ApiPost - start ');
 
     try{
         const defaultUrl = "https://api.15887924.com:18091/";
         const body = req.body;
         const url24call = body.url_call;
         const requestjson = body.req_json;
-        //const jsonData = JSON.stringify(requestjson);
+        const procId = body.procId;
+        const orderId = body.orderId;
+        const jsonData = JSON.stringify(requestjson);
         const api24key = body.api_key;
+
+        logger.info(`\n\norder controller call24ApiPost - ${procId} start `);
 
         try{
             const http = require('https');
@@ -33,6 +31,7 @@ const call24ApiPost = async (req: Request, res: Response) => {
             const mReq = await http.request(defaultUrl+url24call,options,function (apiRes:any) {
                 console.log('Status: ' + apiRes.statusCode);
                 console.log('Headers: ' + JSON.stringify(apiRes.headers));
+                logger.info(`Request Data ->  \n procId : ${procId} \n url : ${url24call} \n request_json: ${jsonData} \n api24key: ${api24key}`);
                 apiRes.setEncoding('utf8');
                 var resData = '';
                 apiRes.on('data', function (body:any) {
@@ -40,18 +39,26 @@ const call24ApiPost = async (req: Request, res: Response) => {
                     resData += body;
                 });
                 apiRes.on('end',function() {
+                    console.log('Status: ' + apiRes.statusCode + "//" + apiRes.statusCode.type);
                     console.log(`response data : ${resData}`);
+                    if(apiRes.statusCode != "200") {
+                        logger.error(`Respose Data Error: \n procId: ${procId} \n orderId: ${orderId} \n ResponseData: ${resData}`)
+                    }else{
+                        logger.info(`Respose Data : \n procId: ${procId} \n orderId: ${orderId} \n ResponseData: ${resData}`);
+                    }
                     res.writeHead(200, {"Content-Type": "text/html; charset=utf-8"});
                     res.write(resData);
                     res.end();
+                    logger.info('order controller call24ApiPost - response end');
                 });
             });
-            await mReq.end(requestjson);
+            await mReq.end(jsonData);
+            logger.info(`order controller call24ApiPost - ${procId} end`);
         }catch(e) {
-            logger.error('order controller call24ApiPost URL_Error : ', e);
+            logger.error(`\n\norder controller call24ApiPost URL_Error : \n procId: ${procId} \n orderId: ${orderId} \n Exception : ${e}`);
         }
     }catch(e) {
-        logger.error('order controller call24ApiPost error : ', e);
+        logger.error('\n\norder controller call24ApiPost error : ', e);
     }
 }
 
