@@ -28,10 +28,10 @@ if (logDir) {
     new WinstonDaily({
       level: 'info',
       json: true,
-      datePattern: 'YYYY-MM-DD',
+      datePattern: 'YYYY-MM-DD',          // 발생일
       dirname: logDir,
       filename: 'info_%DATE%.log',
-      maxFiles: 30, // 30일치 로그 파일 저장
+      maxFiles: 30,                       // 30일치 로그 파일 저장
       zippedArchive: true,
     }),
   );
@@ -41,10 +41,10 @@ if (logDir) {
       level: 'error',
       handleExceptions: true,
       json: true,
-      datePattern: 'YYYY-MM-DD',
-      dirname: `${logDir}/error`, // error.log 파일은 /logs/error 하위에 저장
-      filename: 'error_%DATE%.error.log',
-      maxFiles: 30,
+      datePattern: 'YYYY-MM-DD',          // 발생일
+      dirname: `${logDir}/error`,         // error.log 파일은 /logs/error 하위에 저장
+      filename: 'error_%DATE%.error.log', // 파일명
+      maxFiles: 30,                       // 30일치 로그 파일 저장
       zippedArchive: true,
     }),
   );
