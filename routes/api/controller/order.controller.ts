@@ -42,7 +42,8 @@ const router = Router();
 const call24ApiPost = async (req: Request, res: Response) => {
 
     try{
-        const defaultUrl = "https://api.15887924.com:18091/";
+        //const defaultUrl = "https://api.15887924.com:18091/"; //테스트
+        const defaultUrl = "https://api.15887924.com:18099/"; //운영서버
         const body = req.body;
         const url24call = body.url_call;
         const requestjson = body.req_json;
@@ -82,8 +83,10 @@ const call24ApiPost = async (req: Request, res: Response) => {
                     console.log(`response data : ${resData}`);
                     if(apiRes.statusCode != "200") {
                         logger.error(`Respose Data Error: \n procId: ${procId} \n orderId: ${orderId} \n ResponseData: ${resData}`)
+                        //logger.error(`Respose Data Error: \n procId: ${procId} \n ResponseData: ${resData}`)
                     }else{
                         logger.info(`Respose Data : \n procId: ${procId} \n orderId: ${orderId} \n ResponseData: ${resData}`);
+                        //logger.info(`Respose Data : \n procId: ${procId} \n ResponseData: ${resData}`);
                     }
                     res.writeHead(200, {"Content-Type": "text/html; charset=utf-8"});
                     res.write(resData);
@@ -92,10 +95,12 @@ const call24ApiPost = async (req: Request, res: Response) => {
                     logger.info(`=====================================================================`);
                 });
             });
-            await mReq.end(jsonData);
+            await mReq.end(requestjson); // 운영서버 사용 시
+            //await mReq.end(requestjson); // 포스트맨 사용 시
             logger.info(`order controller call24ApiPost - ${procId} end`);
         }catch(e) {
             logger.error(`\n\norder controller call24ApiPost URL_Error : \n procId: ${procId} \n orderId: ${orderId} \n Exception : ${e}`);
+            //logger.error(`\n\norder controller call24ApiPost URL_Error : \n procId: ${procId} \n Exception : ${e}`);
         }
     }catch(e) {
         logger.error('\n\norder controller call24ApiPost error : ', e);
@@ -137,53 +142,60 @@ const regAlloc = async (req: Request, res: Response) => {
     const date = momentTimezone().tz('Asia/Seoul');
     try{
 
-        logger.info(``);
-        logger.info(``);
-        logger.info(``);
-        logger.info(``);
-        logger.info(`=====================================================================`);
-        logger.info(`order controller regAlloc - start `);
-        var ip = "";
-        var localIpV4Address = require('local-ipv4-address');
-        await localIpV4Address().then(function(ipAddress: string) {
-            console.log(`My Ip Address => ${ipAddress}`);
-            ip = ipAddress;
-        });
-
-        const code = req.query.code;
-        const data = req.query.data;
-        //const body = req.body;
-        //const code = body.code;
-        //const data = body.data;
+        //const code = req.query.code;
+        //const data = req.query.data;
+        const code = req.param('code');
+        const data = req.param('data');
         
-        await axios({
-            url:'http://192.168.53.42:8080/api/alloc/alloc24CallAlloc', 
-            method: 'post',
-            data: {
-                mIp: ip,
-                code: code,
-                data: data,
-              },
-        }).then(async function (response){
-            if(response.status != 200) {
-                retData = utils.getResultData(`${response.status}`, '실패', req.originalUrl, { mIp: ip, expired: date.format('YYYY-MM-DD'), code: code, data: data });
-                logger.error(`Error Respose Data : \nmIp: ${ip} \nstatus: ${response.status} \ncode: ${code} \ndata: ${data}`);
-            }else{
-                retData = utils.getResultData(`${response.status}`, '정상', req.originalUrl, { mIp: ip, expired: date.format('YYYY-MM-DD'), code: code, data: data });
-                logger.info(`Respose Data : \nmIp: ${ip} \nstatus: ${response.status} \ncode: ${code} \ndata: ${data}`);
-            }
-            logger.info('order controller regAlloc - response end');
+        if(code != "0101"){
+
+            logger.info(``);
+            logger.info(``);
+            logger.info(``);
+            logger.info(``);
             logger.info(`=====================================================================`);
-        }).catch(function (error){
-            retData = utils.getResultData(`400`, '실패', req.originalUrl, { mIp: ip, expired: date.format('YYYY-MM-DD'), code: code, data: data });
-            logger.error(``);
-            logger.error(``);
-            logger.error(`--------------------------------------------------------------------`);
-            logger.error(`order controller regAlloc Exception : \nmIp: ${ip} \ncode: ${code} \ndata: ${data} \nException : ${error}`);
-            logger.error(`--------------------------------------------------------------------`);
-            logger.info('order controller regAlloc - response end');
-            logger.info(`=====================================================================`);
-        });
+            logger.info(`order controller regAlloc - start `);
+            var ip = "";
+            
+            /*var localIpV4Address = require('local-ipv4-address');
+            await localIpV4Address().then(function(ipAddress: string) {
+                console.log(`My Ip Address => ${ipAddress}`);
+                ip = ipAddress;
+            });*/
+    
+            const response = await axios.get('https://api64.ipify.org?format=json');
+            ip = response.data.ip;
+            console.log('Public IP:', ip);
+
+            await axios({
+                url:'https://app.logis-link.co.kr/api/alloc/alloc24CallAlloc', 
+                method: 'post',
+                data: {
+                    mIp: ip,
+                    code: code,
+                    data: data,
+                },
+            }).then(async function (response){
+                if(response.status != 200) {
+                    retData = utils.getResultData(`${response.status}`, '실패', req.originalUrl, { mIp: ip, expired: date.format('YYYY-MM-DD'), code: code, data: data });
+                    logger.error(`Error Respose Data : \nmIp: ${ip} \nstatus: ${response.status} \ncode: ${code} \ndata: ${data}`);
+                }else{
+                    retData = utils.getResultData(`${response.status}`, '정상', req.originalUrl, { mIp: ip, expired: date.format('YYYY-MM-DD'), code: code, data: data });
+                    logger.info(`Respose Data : \nmIp: ${ip} \nstatus: ${response.status} \ncode: ${code} \ndata: ${data}`);
+                }
+                logger.info('order controller regAlloc - response end');
+                logger.info(`=====================================================================`);
+            }).catch(function (error){
+                retData = utils.getResultData(`400`, '실패', req.originalUrl, { mIp: ip, expired: date.format('YYYY-MM-DD'), code: code, data: data });
+                logger.error(``);
+                logger.error(``);
+                logger.error(`--------------------------------------------------------------------`);
+                logger.error(`order controller regAlloc Exception : \nmIp: ${ip} \ncode: ${code} \ndata: ${data} \nException : ${error}`);
+                logger.error(`--------------------------------------------------------------------`);
+                logger.info('order controller regAlloc - response end');
+                logger.info(`=====================================================================`);
+            });
+        }
     }catch(e) {
         logger.error('\n\norder controller regAlloc - error : ', e);
     }
