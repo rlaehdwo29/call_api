@@ -26,17 +26,10 @@ const defaultUrl = "https://api.15887924.com:18091/"; //테스트
  * @apiUse errorCommon
  * @apiUse ErrorSample
  * @apiErrorExample {json} Error_ooo
- * 
  * {
- *   "status": "400",
- *   "message": "실패",
- *   "path": "/api/call24/ordNoChk",
- *   "data": {
- *       "mIp": "192.168.53.51",
- *       "expired": "2024-01-23",
- *       "code": "0002",
- *       "data": "f2jyQgmQX0pnDsNjId/FTl+Y4G3EUuzf2v2gh3/WCIKvGcyrDcVVBxTtzGik4rv0WqzoXea3Ue/FcggJRScDWqdWCxjG+oSEzCCv8Bq6aEBmWIdfzK51CpMG2qp7FUopR+brz0OZwzyUJ4N1bzeW4vGCRxHxwITYVoGqpei8smAn13Qm4IYp6W7aC9ubA5Ou"
- *   }
+ *  reqJson: 7sClWNhPnEpaIMuVvneeYJ56DylOMAEPmhmUuTbJXHg= 
+ *  status: 200 
+ *  data: {"code":1,"messege":"정상적으로 처리 되었습니다.","expired":"2024-07-18 14:08:37","data":"JX69Rj+VaoGPTzsHv8xlyTmXFgYFbC/XlUDCjgLWCUDIGcIewS14T/SWKytWi8yN0CPhja51wIqCkkDi224MsVRArmShRiw1UwBb+COjt0nWByqzbfqM5WK1gcqwYBvjTp7aCUhlyFhxAuUa8dguozufWDN/yYdQPpMGo4Ls2VvZBfqYfURFI+sGbDXk6z6yx28jPGo4XQVg+iog/Wp5OGRVpP9PvYEm73sTHB+j3+L7NraUu4CfamVCJhh0n/9FDBu/y2dcCPiy01Sjzqayw/NbIOxw/MsoRV9fk3vN+OiOl3Estr2CVQFyxTtTCfbHD5RUipo+8I3gEZvDwOgvaU9ec4KM5moA06HVXARD1wcXZueIni6nMqQ5odaisCyDw6W4k3FDRLNBEC1xcJkaV1dcJSoP/L4pTCUXT357w2OJI+8n1KIS7+7NXkqCKIvqHAUxZFIKkiTFRcvln/Wpq3SUr1ec1KhPBNDk66mK+o+sZzVehVdze9QYJYmmMW+H9Ejdiy4c+8ZPU20Y8MwQu8VatsJfoLK+LBFvCYsDUKUo4nBXuvp7Mct87HcVci2QbScnw48CFrLneBMVI/B3MLWiKe48qAKS24kMysF3IWZOcYIREereCEV7fjvWio3wgEkfrA2ihyPQxHUgbIa95//ph7ToTAJXy7mnH0nHvDIzz/vnK/wk6eG3jOxwww+1chY7nlc4eSElppY1FS6GYbs5W+KiYcUKin/nlAsWVsizar66BtxZi0Vw7ljXgpSPvag3IDjzg1UH0WKcGB9bTAe2enJIOAxamAFgOqDJYYMBaO40uHyJNWMSrJMGMM3HHyWxGfzhT2f0HtdXSKrkgpQ0Co98WgOh6LHZw+eSyTAezD+yCBsfYSUT3WzrJXA60mfxUvZoEOSP1nPd0E1LU+wCr+0nGtuOoKYHcm/TC+Ma4kpTm9B9OadbOa0FmKpBeOvmOHTCTjJs6cfavf3P2trfV+u5t1y9hUx2gWtxD0K1VpXDuo33SJQEflS4eAalls/bJTsBBZyTvpbDacBZWZhGCZiUeav6fesGcJFNcU8="} 
  * }
  * 
  */
@@ -49,8 +42,10 @@ const ordNoChk = async (req: Request, res: Response) => {
         const subUrl = req.param('url_call');
         const reqJson = req.param('req_json');
         const apiKey = req.param('api_key');
-     
-            //API 배차확정 
+        logger.info(``);
+        logger.info(``);
+        logger.info(`=====================================================================`);
+        logger.info('order controller ordNoChk - response start');
             await axios({
                 url:defaultUrl+subUrl, 
                 method: 'post',
@@ -64,16 +59,16 @@ const ordNoChk = async (req: Request, res: Response) => {
                 },
             }).then(async function (response){
                 if(response.status != 200) {
-                    retData = utils.getResultData(`${response.status}`, '실패', req.originalUrl, { subUrl: subUrl, expired: date.format('YYYY-MM-DD'),  data: reqJson });
+                    retData = utils.getResultData(`${response.status}`, '실패', req.originalUrl, { code: response.data.code, messege: response.data.message, expired: date.format('YYYY-MM-DD HH:mm:ss'),  data: response.data.data });
                     logger.error(`Error Respose Data : \nreqJson: ${reqJson} \nstatus: ${response.status} \ndata: ${retData.data}`);
                 }else{
-                    retData = utils.getResultData(`${response.status}`, '정상', req.originalUrl, { subUrl: subUrl, expired: date.format('YYYY-MM-DD'),  data: reqJson });
-                    logger.info(`Respose Data : \nreqJson: ${reqJson} \nstatus: ${response.status} \ndata: ${retData.data}`);
+                    retData = utils.getResultData(`${response.status}`, '정상', req.originalUrl, { code: response.data.code, messege: response.data.message, expired: date.format('YYYY-MM-DD HH:mm:ss'),  data: response.data.data });
+                    logger.info(`Respose Data : \nreqJson: ${reqJson} \nstatus: ${response.status} \ndata: ${JSON.stringify(retData.data)}`);
                 }
                 logger.info('order controller ordNoChk - response end');
                 logger.info(`=====================================================================`);
             }).catch(function (error){
-                retData = utils.getResultData(`400`, '실패', req.originalUrl, { subUrl: subUrl, expired: date.format('YYYY-MM-DD'), error: error.message });
+                retData = utils.getResultData(`400`, '실패', req.originalUrl, { reqData: reqJson, expired: date.format('YYYY-MM-DD HH:mm:ss'), error: error.message });
                 logger.error(``);
                 logger.error(``);
                 logger.error(`--------------------------------------------------------------------`);
